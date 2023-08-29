@@ -15,11 +15,11 @@ const SearchInput: React.FC<SearchInputProps> = ({ user }) => {
       mr={2}
       align={"center"}
       justify={"center"}
+      position={'relative'}
     >
       <InputGroup>
-        <InputLeftElement pointerEvents="none">
-          <SearchIcon color={"gray.400"} mb={1}></SearchIcon>
-        </InputLeftElement>
+        <InputLeftElement pointerEvents="none" />
+        <SearchIcon color={"gray.400"} position={"absolute"} mb={1}></SearchIcon>
 
         <Input
           fontSize={"10pt"}

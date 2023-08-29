@@ -14,12 +14,10 @@ const SearchInput: React.FC<SearchInputProps> = ({ user }) => {
       maxWidth={user ? "auto" : "600px"}
       mr={2}
       align={"center"}
-      justify={"center"}
     >
       <InputGroup>
-        <InputLeftElement pointerEvents="none">
-          <SearchIcon color={"gray.400"} mb={1}></SearchIcon>
-        </InputLeftElement>
+        <InputLeftElement pointerEvents="none" />
+        <SearchIcon color={"red"} mb={1}></SearchIcon>
 
         <Input
           fontSize={"10pt"}
