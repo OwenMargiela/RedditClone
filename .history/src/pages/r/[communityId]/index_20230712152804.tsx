@@ -17,29 +17,27 @@ type communityPageProps = {
 };
 
 const CommunityPage: React.FC<communityPageProps> = ({ communityData }) => {
-  const setCommunityStateValue = useSetRecoilState(communityState);
-
-  useEffect(() => {
-    setCommunityStateValue((prev) => ({
-      ...prev,
-      currentCommunity: communityData,
-    }));
-  }, [communityData]);
-
+  const setCommunityStateValue = useSetRecoilState(communityState)
   if (!communityData) {
     return <CommunityNotFound></CommunityNotFound>;
   }
-
+  useEffect(() =>{
+    setCommunityStateValue(prev =>({
+      ...prev,
+      currentCommunity: communityData
+    }))
+    
+  },[communityData])
   return (
     <>
       <Header communityData={communityData}></Header>
       <PageContent>
         <>
           <CreatePostLink></CreatePostLink>
-          <Post communityData={communityData}></Post>
+         <Post communityData={communityData}></Post>
         </>
         <>
-          <About communityData={communityData}></About>
+        <About communityData={communityData} ></About>
         </>
       </PageContent>
     </>
