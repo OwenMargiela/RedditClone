@@ -45,7 +45,7 @@ const Navbar: React.FC = () => {
         <Image
           onClick={() => onselectMenuItem(defaultMenuItem)}
           cursor={"pointer"}
-          src="/images/reddittext.svg"
+          src="/images/redditText.svg"
           height={"46px"}
           display={{ base: "none", md: "unset" }}
         ></Image>
